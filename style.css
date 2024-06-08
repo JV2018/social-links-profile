@@ -27,7 +27,7 @@ body {
     background-color: var(--dark-grey);
     width: 20rem;
     padding: 1.5rem;
-    border: 1px solid red;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,9 +73,27 @@ body {
     margin-bottom: 0;
 }
 
+.social-link-container:hover,
+.social-link-container:active {
+    background-color: var(--neon-green);
+    color: var(--grey);
+    cursor: pointer;
+}
+
+.social-link-container:hover .social-link,
+.social-link-container:active .social-link {
+    color: var(--grey);
+}
+
 .social-link {
-    color: var(--white);
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 700;
+    color: var(--white);
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 24rem;
+    }
 }
